@@ -1,3 +1,10 @@
 spring:
   application:
     name: azure-servicebus-reference-app
+servicebus:
+  connection-string:  ${SERVICEBUS_CONNECTION_STRING}
+  queues:
+    ai-organization: ai-organization-queue
+  listener:
+    enabled: true
+    max-concurrent-calls: 5
